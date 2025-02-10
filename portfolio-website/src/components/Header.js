@@ -1,9 +1,16 @@
-import React from 'react';
-import '../assets/styles/Header.css'; // Commented out for now
+import React, { useState } from "react";
+import "../assets/styles/Header.css";
 
 const Header = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("dark-mode", !isDarkMode);
+  };
+
   return (
-    <header>
+    <header className={isDarkMode ? "dark-mode" : ""}>
       <nav>
         <ul>
           <li><a href="#home">HOME</a></li>
@@ -12,6 +19,9 @@ const Header = () => {
           <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
+        <button onClick={toggleDarkMode}>
+          {isDarkMode ? "Light Mode" : "Dark Mode"}
+        </button>
       </nav>
     </header>
   );

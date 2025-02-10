@@ -1,20 +1,19 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Light mode (default) */
+body {
+    background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
   }
   
-  a {
-    text-decoration: none;
-    color: inherit;
+  /* Dark mode */
+  body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
   }
   
-  ul {
-    list-style: none;
+  header.dark-mode {
+    background-color: #222;
+    color: #fff;
   }
+  
+  /* Add more dark mode styles as needed */
