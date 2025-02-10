@@ -1,0 +1,10 @@
+#projects {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
